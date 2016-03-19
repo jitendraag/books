@@ -8,7 +8,7 @@ class BookIndex(indexes.SearchIndex, indexes.Indexable):
     name = indexes.CharField(model_attr='name')
     text = indexes.CharField(document=True)
     pages = indexes.IntegerField(model_attr='pages', faceted=True)
-    price = indexes.IntegerField(model_attr='price', faceted=True)
+    price = indexes.DecimalField(model_attr='price', faceted=True)
     rating = indexes.FloatField(model_attr='rating', faceted=True)
     book_id = indexes.CharField(model_attr='id', faceted=False)
     pubdate = indexes.DateField(model_attr='pubdate', faceted=True)
