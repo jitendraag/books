@@ -15,6 +15,7 @@ class BookIndex(indexes.SearchIndex, indexes.Indexable):
     category = indexes.CharField(model_attr='category', faceted=True)
     publisher = indexes.CharField(model_attr='publisher', faceted=True)
     pub_year = indexes.CharField(faceted=True)
+    author_set = indexes.MultiValueField(faceted=True)
 
     def get_model(self):
         return Book
