@@ -157,9 +157,11 @@
 
     <field name="text" type="text_en" indexed="true" stored="true" multiValued="false" />
 
-    <field name="price" type="long" indexed="true" stored="true" multiValued="false" />
+    <field name="price" type="text_en" indexed="true" stored="true" multiValued="false" />
 
-    <field name="price_exact" type="long" indexed="true" stored="true" multiValued="false" />
+    <field name="author_set_exact" type="string" indexed="true" stored="true" multiValued="true" />
+
+    <field name="price_exact" type="string" indexed="true" stored="true" multiValued="false" />
 
     <field name="pub_year_exact" type="string" indexed="true" stored="true" multiValued="false" />
 
@@ -178,6 +180,8 @@
     <field name="publisher_exact" type="string" indexed="true" stored="true" multiValued="false" />
 
     <field name="name" type="text_en" indexed="true" stored="true" multiValued="false" />
+
+    <field name="author_set" type="text_en" indexed="true" stored="true" multiValued="true" />
 
     <field name="pubdate_exact" type="date" indexed="true" stored="true" multiValued="false" />
 
